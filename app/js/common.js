@@ -76,7 +76,31 @@ $(window).scroll(function() {
 	}
 });
 
+/*Typed.js 
+https://github.com/mattboldt/typed.js*/
+if($(document).width() >= 1200) {
+	$(".js-typed").typed({
+		strings: [" for beautiful prototypes", "Try Your <b>FREE</b> Trial Today!"],
+		startDelay: 300,
+		typeSpeed: 40,
+		backSpeed: 20,
+		backDelay: 1000,
+		loop: true,
+	});
+}
+
+/*WOW.js 
+https://github.com/matthieua/WOW*/
+var wow = new WOW(
+	{
+		boxClass: 'wow',
+		animateClass: 'animated',
+		offset: 160,
+		mobile: false
+	}
+);
+wow.init();
+
+
 
 });
-
-

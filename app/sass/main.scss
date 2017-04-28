@@ -33,34 +33,6 @@ body textarea:required:valid {
 	color: #bdbdbd;
 }
 
-/*===== Preloader =====*/
-
-.loader {
-	background: none repeat scroll 0 0 #000;
-	bottom: 0;
-	height: 100%;
-	left: 0;
-	position: fixed;
-	right: 0;
-	top: 0;
-	width: 100%;
-	z-index: 9999;
-}
-
-.loader-inner {
-	background-image: url("../img/loader.gif");
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-color: #000;
-	height: 60px;
-	width: 60px;
-	margin-top: -30px;
-	margin-left: -30px;
-	left: 50%;
-	top: 50%;
-	position: absolute;
-}
-
 html, body {
 	height: 100%;
 }
@@ -118,6 +90,34 @@ h3 {
 h4 {
 	font-weight: 600;
 	font-size: 14px;
+}
+
+/*===== Preloader =====*/
+
+.loader {
+	background: none repeat scroll 0 0 #000;
+	bottom: 0;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+}
+
+.loader-inner {
+	background-image: url("../img/loader.gif");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: #000;
+	height: 60px;
+	width: 60px;
+	margin-top: -30px;
+	margin-left: -30px;
+	left: 50%;
+	top: 50%;
+	position: absolute;
 }
 
 /*===== Header =====*/
@@ -890,6 +890,8 @@ h4 {
 	}
 }
 
+/*===== To top Button =====*/
+
 .to-top {
 	position: fixed;
 	right: 20px;
@@ -913,6 +915,30 @@ h4 {
 	&:hover {
 		opacity: 1;
 	}
+}
+
+/*===== Typed js blinking cursor =====*/
+
+.typed-cursor{
+	opacity: 1;
+	-webkit-animation: blink 0.7s infinite;
+	-moz-animation: blink 0.7s infinite;
+	animation: blink 0.7s infinite;
+}
+@keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+@-moz-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
 }
 
 
