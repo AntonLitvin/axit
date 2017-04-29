@@ -33,6 +33,11 @@ body textarea:required:valid {
 	color: #bdbdbd;
 }
 
+body input,
+body textarea {
+	box-shadow: none;
+}
+
 html, body {
 	height: 100%;
 }

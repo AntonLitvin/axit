@@ -78,7 +78,7 @@ $(window).scroll(function() {
 
 /*Typed.js 
 https://github.com/mattboldt/typed.js*/
-if($(document).width() >= 1200) {
+if($(document).width() >= 768) {
 	$(".js-typed").typed({
 		strings: [" for beautiful prototypes", "Try Your <b>FREE</b> Trial Today!"],
 		startDelay: 300,
@@ -95,7 +95,7 @@ var wow = new WOW(
 	{
 		boxClass: 'wow',
 		animateClass: 'animated',
-		offset: 160,
+		offset: 50,
 		mobile: false
 	}
 );
