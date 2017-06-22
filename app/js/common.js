@@ -1,6 +1,6 @@
 $(window).on('load', function() { 
-	$(".loader-inner").fadeOut(); 
-	$(".loader").delay(400).fadeOut(100); 
+	$('.loader-inner').fadeOut(); 
+	$('.loader').delay(400).fadeOut(100); 
 });
 
 
@@ -8,16 +8,16 @@ $(function() {
 
 //SVG Fallback
 if(!Modernizr.svg) {
-	$("img[src*='svg']").attr("src", function() {
-		return $(this).attr("src").replace(".svg", ".png");
+	$('img[src*="svg"]').attr('src', function() {
+		return $(this).attr('src').replace('.svg', '.png');
 	});
 };
 
 
 /*Toggle main menu*/
-$(".toggle-mnu").click(function() {
-	$(this).toggleClass("on");
-	$(".header-nav").slideToggle();
+$('.toggle-mnu').on('click', function() {
+	$(this).toggleClass('on');
+	$('.header-nav').slideToggle();
 	return false;
 });
 
@@ -30,11 +30,11 @@ $(window).resize(function(){
 
 
 /*Tabs*/
-$(".tab-item").not(":first").hide();
-$(".tabs .tab").click(function() {
-	$(".tabs .tab").removeClass("active").eq($(this).index()).addClass("active");
-	$(".tab-item").hide().eq($(this).index()).fadeIn()
-}).eq(0).addClass("active");
+$('.tab-item').not(':first').hide();
+$('.tabs .tab').click(function() {
+	$('.tabs .tab').removeClass('active').eq($(this).index()).addClass('active');
+	$('.tab-item').hide().eq($(this).index()).fadeIn()
+}).eq(0).addClass('active');
 
 
 /*Pricing item*/
@@ -51,7 +51,7 @@ $('.header-nav a').on('click', function () {
 	var destination = $(elementClick).offset().top;
 
 	if ($(elementClick).length != 0) {    // проверка существования элемента
-		$('html, body').animate({ scrollTop: destination - 60}, 1000);
+		$('html, body').stop(true, true).animate({ scrollTop: destination - 60}, 1000);
 		if ($('.toggle-mnu').hasClass('on')) {
 			$('.header-nav').slideUp();
 			$('.toggle-mnu').removeClass('on');
@@ -79,7 +79,7 @@ $(window).scroll(function() {
 /*Typed.js 
 https://github.com/mattboldt/typed.js*/
 if($(document).width() >= 768) {
-	$(".js-typed").typed({
+	$('.js-typed').typed({
 		strings: [" for beautiful prototypes", "Try Your <b>FREE</b> Trial Today!"],
 		startDelay: 300,
 		typeSpeed: 40,
