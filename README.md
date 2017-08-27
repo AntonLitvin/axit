@@ -1,6 +1,8 @@
-# axit
+# Axit
 
-Adaptive animation landing page
+[DEMO](https://antonlitvin.github.io/axit/dist/)
+
+Training responsive landing page with animations
 
 Used:<br>
 Bootstrap grid<br>
