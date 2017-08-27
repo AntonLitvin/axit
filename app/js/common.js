@@ -11,7 +11,7 @@ if(!Modernizr.svg) {
 	$('img[src*="svg"]').attr('src', function() {
 		return $(this).attr('src').replace('.svg', '.png');
 	});
-};
+}
 
 
 /*Toggle main menu*/
@@ -33,14 +33,14 @@ $(window).resize(function(){
 $('.tab-item').not(':first').hide();
 $('.tabs .tab').click(function() {
 	$('.tabs .tab').removeClass('active').eq($(this).index()).addClass('active');
-	$('.tab-item').hide().eq($(this).index()).fadeIn()
+	$('.tab-item').hide().eq($(this).index()).fadeIn();
 }).eq(0).addClass('active');
 
 
 /*Pricing item*/
 $('.pricing-item').on('click', function(){
-	$('.pricing-item').removeClass('active')
-	$(this).addClass('active')
+	$('.pricing-item').removeClass('active');
+	$(this).addClass('active');
 });
 
 
@@ -100,6 +100,29 @@ var wow = new WOW(
 	}
 );
 wow.init();
+
+
+//Swiper slider
+var mySwiper = new Swiper ('.swiper-container', {
+	spaceBetween: 30,
+	loop: true,
+	slidesPerView: 3,
+	nextButton: '.swiper-button-next',
+	prevButton: '.swiper-button-prev',
+	autoplay: 7000,
+	autoplayDisableOnInteraction: false,
+	breakpoints: {
+		1200: {
+			slidesPerView: 3
+		},
+		992: {
+			slidesPerView: 2
+		},
+		768: {
+			slidesPerView: 1
+		}
+	}
+});
 
 
 
